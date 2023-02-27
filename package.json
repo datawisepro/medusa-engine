@@ -7,11 +7,13 @@
   "scripts": {
     "seed": "medusa seed -f ./data/seed.json",
     "build": "babel src -d dist --extensions \".ts,.js\"",
-    "start": "medusa develop"
+    "start": "medusa develop",
+    "dev": "redis-server --daemonize yes && medusa develop"
   },
   "dependencies": {
     "@medusajs/medusa": "^1.6.0",
     "@medusajs/medusa-cli": "^1.3.3",
+    "cors": "^2.8.5",
     "medusa-fulfillment-manual": "^1.1.31",
     "medusa-interfaces": "^1.3.3",
     "medusa-payment-manual": "^1.0.16",
