@@ -1,7 +1,6 @@
 export const products = (router) => {
   router.get("/store/products", async (req, res) => {
     const productService = req.scope.resolve("productService");
-
     res.json(await productService.list({}, {}));
   });
 };
